@@ -64,6 +64,13 @@ nav a:hover { color: var(--accent); }
 .card h3 { margin: 14px 0 6px; font-size: 19px; }
 .card p { margin: 0; color: var(--muted); }
 
+/* 研究圖像 */
+.research-visual { margin: 40px 0 0; }
+.research-visual img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.research-visual figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.research-visual figcaption strong { color: var(--text); font-weight: 500; }
+.research-visual figcaption a { color: inherit; text-underline-offset: 2px; }
+
 /* 成員 */
 .group-title { font-size: 18px; color: var(--muted); margin: 28px 0 14px; }
 .group-title:first-child { margin-top: 0; }
