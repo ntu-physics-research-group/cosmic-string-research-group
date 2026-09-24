@@ -54,11 +54,10 @@ const SITE = {
     {
       group: "指導教授",
       people: [
-        // 依姓氏筆畫排列：林（8 畫）、晏（10 畫）、張（11 畫）、劉（15 畫）
         { name: "林奕安", role: "", topic: "", office: "天文數學館 820 室", email: "" },
         { name: "晏千博", role: "", topic: "", office: "天文數學館 819 室", email: "justin910912@gmail.com" },
-        { name: "張凱甯", role: "合聘研究員", topic: "電波天文學", office: "天文數學館 827 室", email: "" },
         { name: "劉雨恩", role: "", topic: "", email: "" },
+        { name: "張凱甯", role: "合聘研究員", topic: "電波天文學", office: "天文數學館 827 室", email: "" },
       ],
     },
     { group: "博士生", people: [] },
