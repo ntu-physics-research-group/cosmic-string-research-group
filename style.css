@@ -75,14 +75,15 @@ nav a:hover { color: var(--accent); }
 .group-title { font-size: 18px; color: var(--muted); margin: 28px 0 14px; }
 .group-title:first-child { margin-top: 0; }
 .members { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
-.member { display: flex; align-items: center; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+.member { display: flex; align-items: flex-start; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
 .avatar { flex: none; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.member > div:last-child { min-width: 0; }
 .member h4 { margin: 0; font-size: 17px; }
 .member p { margin: 0; font-size: 14px; }
 .member .role { color: var(--accent); }
 .member .topic { color: var(--muted); }
-.member .office { color: var(--muted); }
-.member a { font-size: 13px; word-break: break-all; }
+.member .office { display: block; color: var(--muted); }
+.member a { display: block; margin-top: 2px; font-size: 13px; overflow-wrap: anywhere; word-break: normal; }
 
 /* 例行 Meeting */
 .meetings-block { margin-top: 56px; padding-top: 56px; border-top: 1px solid var(--line); }
