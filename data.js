@@ -8,7 +8,7 @@ const SITE = {
   // ---- 基本資料 ----
   groupName: "宇宙弦研究小組",
   groupNameEn: "Cosmic String Research Group",
-  affiliation: "國立臺灣大學",
+  affiliation: "國立臺灣大學 物理學系",
   tagline: "從早期宇宙的相變，追尋時空中留下的線狀遺跡。",
   intro:
     "宇宙弦是早期宇宙在對稱性破缺的相變過程中，可能形成的一維拓樸缺陷。" +
@@ -18,8 +18,8 @@ const SITE = {
   // ---- 聯絡資訊（空白的欄位不會顯示）----
   contact: {
     email: "",
-    address: "106319 臺北市羅斯福路四段一號 國立臺灣大學",
-    phone: "臺大總機 02-3366-3366",
+    address: "106319 臺北市羅斯福路四段一號 國立臺灣大學 物理學系 天文數學館",
+    phone: "",
     github: "",
   },
 
