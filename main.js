@@ -31,6 +31,7 @@
             <div><h4>${esc(m.name)}</h4>
             ${m.role ? `<p class="role">${esc(m.role)}</p>` : ""}
             ${m.topic ? `<p class="topic">${esc(m.topic)}</p>` : ""}
+            ${m.office ? `<p class="office">研究室：${esc(m.office)}</p>` : ""}
             ${m.email ? `<a href="mailto:${esc(m.email)}">${esc(m.email)}</a>` : ""}</div>
           </article>`
               )
@@ -39,6 +40,17 @@
       }`
     )
     .join("");
+
+  // 例行 Meeting
+  $("meetingList").innerHTML = SITE.meetings.length
+    ? SITE.meetings
+        .map(
+          (m) => `<article class="card meeting"><h3>${esc(m.title)}</h3><p class="meeting-time">${esc(m.schedule)}</p>${
+            m.location ? `<p class="meeting-location">${esc(m.location)}</p>` : ""
+          }</article>`
+        )
+        .join("")
+    : empty;
 
   // 論文（依年份新到舊）
   const years = [...new Set(SITE.publications.map((p) => p.year))].sort((a, b) => b - a);
