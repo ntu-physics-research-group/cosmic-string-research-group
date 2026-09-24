@@ -49,20 +49,26 @@ const SITE = {
 
   // ---- 成員 ----
   // 每一組的 people 清單可自由增減；清單為空時會顯示「尚待更新」
-  // 每位成員可填：name（姓名）、role（職稱）、topic（研究主題）、email
+  // 每位成員可填：name（姓名）、role（職稱）、topic（研究主題）、office（研究室）、email
   members: [
     {
       group: "指導教授",
       people: [
         // 依姓氏筆畫排列：林（8 畫）、晏（10 畫）、劉（15 畫）
-        { name: "林奕安", role: "", topic: "", email: "" },
-        { name: "晏千博", role: "", topic: "", email: "" },
+        { name: "林奕安", role: "", topic: "", office: "天文數學館 820 室", email: "" },
+        { name: "晏千博", role: "", topic: "", office: "天文數學館 819 室", email: "justin910912@gmail.com" },
         { name: "劉雨恩", role: "", topic: "", email: "" },
       ],
     },
     { group: "博士生", people: [] },
     { group: "碩士生", people: [] },
     { group: "大學部", people: [] },
+  ],
+
+  // ---- 例行 Meeting ----
+  meetings: [
+    { title: "與其他研究小組 Meeting", schedule: "每週四 19:00", location: "天文數學館 818 會議室" },
+    { title: "研究小組 Meeting", schedule: "每週五 13:30", location: "" },
   ],
 
   // ---- 論文發表（依年份自動分組）----
