@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>研究小組</title>
+  <meta name="description" content="研究小組介紹網站" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="#top" class="brand" id="brand"></a>
+      <button class="menu-btn" id="menuBtn" aria-label="開啟選單" aria-expanded="false">☰</button>
+      <nav id="nav">
+        <a href="#research">研究方向</a>
+        <a href="#members">成員</a>
+        <a href="#publications">論文發表</a>
+        <a href="#news">最新消息</a>
+        <a href="#join">加入我們</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow" id="affiliation"></p>
+        <h1 id="groupName"></h1>
+        <p class="en" id="groupNameEn"></p>
+        <p class="tagline" id="tagline"></p>
+        <p class="intro" id="intro"></p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#research">認識我們的研究</a>
+          <a class="btn" href="#join">加入我們</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="wrap">
+        <h2>研究方向</h2>
+        <div class="grid cards" id="researchList"></div>
+      </div>
+    </section>
+
+    <section id="members" class="section alt">
+      <div class="wrap">
+        <h2>成員</h2>
+        <div id="memberList"></div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="wrap">
+        <h2>論文發表</h2>
+        <div id="pubList"></div>
+      </div>
+    </section>
+
+    <section id="news" class="section alt">
+      <div class="wrap">
+        <h2>最新消息</h2>
+        <ul class="news" id="newsList"></ul>
+      </div>
+    </section>
+
+    <section id="join" class="section">
+      <div class="wrap narrow">
+        <h2>加入我們</h2>
+        <p id="joinText"></p>
+        <a class="btn primary" id="joinMail">來信洽詢</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="wrap">
+        <h2>聯絡資訊</h2>
+        <dl class="contact" id="contactList"></dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap" id="footer"></div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
