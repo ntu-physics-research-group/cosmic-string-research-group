@@ -74,7 +74,15 @@ nav a:hover { color: var(--accent); }
 .member p { margin: 0; font-size: 14px; }
 .member .role { color: var(--accent); }
 .member .topic { color: var(--muted); }
+.member .office { color: var(--muted); }
 .member a { font-size: 13px; word-break: break-all; }
+
+/* 例行 Meeting */
+.meetings-block { margin-top: 56px; padding-top: 56px; border-top: 1px solid var(--line); }
+.meetings { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.meeting h3 { margin-top: 0; }
+.meeting-time { color: var(--accent) !important; font-weight: 500; }
+.meeting-location { margin-top: 6px !important; }
 
 /* 論文 */
 .pub-year { display: grid; grid-template-columns: 80px 1fr; gap: 12px; border-top: 1px solid var(--line); padding: 18px 0; }
