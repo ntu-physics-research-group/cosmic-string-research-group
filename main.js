@@ -30,7 +30,7 @@
             <div class="avatar" aria-hidden="true">${esc(m.name.slice(-2))}</div>
             <div><h4>${esc(m.name)}</h4>
             ${m.role ? `<p class="role">${esc(m.role)}</p>` : ""}
-            ${m.topic ? `<p class="topic">${esc(m.topic)}</p>` : ""}
+            ${m.topic ? `<p class="topic">研究興趣：${esc(m.topic)}</p>` : ""}
             ${m.office ? `<p class="office">研究室：${esc(m.office)}</p>` : ""}
             ${m.email ? `<a href="mailto:${esc(m.email)}">${esc(m.email)}</a>` : ""}</div>
           </article>`
