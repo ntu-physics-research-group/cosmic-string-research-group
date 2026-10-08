@@ -8,7 +8,7 @@ const SITE = {
   // ---- 基本資料 ----
   groupName: "宇宙弦研究小組",
   groupNameEn: "Cosmic String Research Group",
-  affiliation: "國立臺灣大學",
+  affiliation: "國立臺灣大學 物理學系",
   tagline: "從早期宇宙的相變，追尋時空中留下的線狀遺跡。",
   intro:
     "宇宙弦是早期宇宙在對稱性破缺的相變過程中，可能形成的一維拓樸缺陷。" +
@@ -18,8 +18,8 @@ const SITE = {
   // ---- 聯絡資訊（空白的欄位不會顯示）----
   contact: {
     email: "",
-    address: "106319 臺北市羅斯福路四段一號 國立臺灣大學",
-    phone: "臺大總機 02-3366-3366",
+    address: "106319 臺北市羅斯福路四段一號 國立臺灣大學 物理學系 天文數學館 8 樓研究室",
+    phone: "",
     github: "",
   },
 
@@ -49,20 +49,28 @@ const SITE = {
 
   // ---- 成員 ----
   // 每一組的 people 清單可自由增減；清單為空時會顯示「尚待更新」
-  // 每位成員可填：name（姓名）、role（職稱）、topic（研究主題）、email
+  // 每位成員可填：name（姓名）、role（職稱）、topic（研究主題）、office（研究室）、email
   members: [
     {
       group: "指導教授",
       people: [
-        // 依姓氏筆畫排列：林（8 畫）、晏（10 畫）、劉（15 畫）
-        { name: "林奕安", role: "", topic: "", email: "" },
-        { name: "晏千博", role: "", topic: "", email: "" },
+        { name: "林奕安", role: "", topic: "Lensing of Gravitational Waves by Cosmic Strings from Scattering Amplitudes", topicLabel: "近期研究課題", office: "天文數學館 820 室", email: "" },
+        { name: "晏千博", role: "", topic: "", office: "天文數學館 819 室", email: "justin910912@gmail.com" },
         { name: "劉雨恩", role: "", topic: "", email: "" },
+        { name: "張凱甯", role: "合聘研究員", topic: "電波天文學", office: "天文數學館 827 室", email: "" },
       ],
     },
-    { group: "博士生", people: [] },
+    { group: "博士生", people: [
+      { name: "林宥崴", role: "", topic: "宇宙拓樸", advisor: "晏千博", office: "", email: "" },
+    ] },
     { group: "碩士生", people: [] },
     { group: "大學部", people: [] },
+  ],
+
+  // ---- 例行 Meeting ----
+  meetings: [
+    { title: "跨研究小組 Meeting", schedule: "上學期：每週四 19:00\n下學期：每週二 19:00", course: "理論物理專題", location: "天文數學館 818 會議室" },
+    { title: "研究小組 Meeting", schedule: "每學期：每週五 13:30", course: "高等理論物理專題", location: "" },
   ],
 
   // ---- 論文發表（依年份自動分組）----
@@ -71,7 +79,21 @@ const SITE = {
 
   // ---- 最新消息 ----
   // 範例：{ date: "2026-09-24", text: "消息內容" }
-  news: [],
+  news: [
+    { date: "2026.10.08", text: "因應雙十連假，原訂 10/9 的研究小組 Meeting 改於 10/8（四）跨研究小組 Meeting 結束後舉行。" },
+    { date: "2026.10.04", text: "歡迎博士生林宥崴加入研究小組。" },
+    { date: "2026.09.24", text: "歡迎新成員張凱甯加入研究小組" },
+    { date: "2026.09.23", text: "因應中秋連假，原訂 9/25 的研究小組 Meeting 改於 9/24（四）上午 10:30 舉行。" },
+    { date: "2026.09.17", text: "研究小組成立" },
+  ],
+
+  // ---- 學習資源：PDF 存在時才會顯示在網站上 ----
+  notes: [
+    {"title":"Massless Spectra from Cosmic String Cusps","category":"宇宙弦","date":"2026.08.07","pages":5,"file":"notes/CS.pdf","credit":"整理：晏千博"},
+    {"title":"Cosmology","category":"宇宙學","date":"2026.09.04","pages":22,"file":"notes/cosmo.pdf","credit":"整理：晏千博"},
+    {"title":"Gravitational Waves","category":"重力波","date":"2026.08.04","pages":7,"file":"notes/GW.pdf","credit":"整理：晏千博"},
+    {"title":"Loop Quantum Gravity","category":"迴圈量子重力","date":"2026.08.31","pages":8,"file":"notes/LQG.pdf","credit":"整理：晏千博"}
+  ],
 
   // ---- 招生 ----
   join:

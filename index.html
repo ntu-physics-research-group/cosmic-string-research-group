@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>研究小組</title>
-  <meta name="description" content="研究小組介紹網站" />
+  <title>宇宙弦研究小組｜國立臺灣大學物理學系</title>
+  <meta name="description" content="國立臺灣大學物理學系宇宙弦研究小組，研究宇宙弦的形成、網路演化、重力波訊號與宇宙微波背景觀測限制。" />
+  <link rel="canonical" href="https://ntu-physics-research-group.github.io/cosmic-string-research-group/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261009-semester-address" />
 </head>
 <body>
   <header class="topbar">
@@ -18,7 +19,9 @@
       <nav id="nav">
         <a href="#research">研究方向</a>
         <a href="#members">成員</a>
+        <a href="#meetings">Meeting</a>
         <a href="#publications">論文發表</a>
+        <a href="#notes" id="notesNav" hidden>學習資源</a>
         <a href="#news">最新消息</a>
         <a href="#join">加入我們</a>
         <a href="#contact">聯絡</a>
@@ -45,6 +48,23 @@
       <div class="wrap">
         <h2>研究方向</h2>
         <div class="grid cards" id="researchList"></div>
+
+        <figure class="research-visual">
+          <a href="https://commons.wikimedia.org/wiki/File:Cosmic_strings_evolution_during_the_expansion_of_the_Universe.webm" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Cosmic_strings_evolution_during_the_expansion_of_the_Universe.webm/1280px--Cosmic_strings_evolution_during_the_expansion_of_the_Universe.webm.jpg"
+              alt="膨脹宇宙中的 Nambu–Goto 宇宙弦網路數值模擬"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>
+            <strong>宇宙弦數值模擬。</strong>
+            Nambu–Goto cosmic string network in an expanding Universe.
+            Image: <a href="https://commons.wikimedia.org/wiki/User:Eatdirt" target="_blank" rel="noopener noreferrer">Chris Ringeval</a>,
+            via <a href="https://commons.wikimedia.org/wiki/File:Cosmic_strings_evolution_during_the_expansion_of_the_Universe.webm" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>,
+            licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -52,6 +72,11 @@
       <div class="wrap">
         <h2>成員</h2>
         <div id="memberList"></div>
+
+        <div id="meetings" class="meetings-block">
+          <h2>例行 Meeting</h2>
+          <div class="grid meetings" id="meetingList"></div>
+        </div>
       </div>
     </section>
 
@@ -59,6 +84,13 @@
       <div class="wrap">
         <h2>論文發表</h2>
         <div id="pubList"></div>
+      </div>
+    </section>
+
+    <section id="notes" class="section" hidden>
+      <div class="wrap">
+        <h2>學習資源</h2>
+        <div class="grid notes" id="noteList"></div>
       </div>
     </section>
 
@@ -89,7 +121,7 @@
     <div class="wrap" id="footer"></div>
   </footer>
 
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+  <script src="data.js?v=20261009-semester-address"></script>
+  <script src="main.js?v=20261009-semester-address"></script>
 </body>
 </html>

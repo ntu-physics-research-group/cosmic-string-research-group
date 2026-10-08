@@ -1,0 +1,46 @@
+name: Sync Notion Data to Website
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 16 * * *' # 每天台灣時間 00:00 自動執行一次
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Notion Sync Script
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_NEWS_DB: ${{ secrets.NOTION_NEWS_DB }}
+          NOTION_MEMBER_DB: ${{ secrets.NOTION_MEMBER_DB }}
+          NOTION_MEETING_DB: ${{ secrets.NOTION_MEETING_DB }}
+          NOTION_PUB_DB: ${{ secrets.NOTION_PUB_DB }}
+          DATA_JS_PATH: 'data.js'
+        run: python scripts/sync_cosmic_data.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.js
+          if git diff --staged --quiet; then
+            echo "No changes in data.js to commit."
+          else
+            git commit -m "chore(data): auto-sync website data from Notion"
+            git push
+          fi
