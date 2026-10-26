@@ -5,8 +5,8 @@
   --text: #24282b;
   --muted: #62696c;
   --line: #d6dad9;
-  --accent: #444b50;
-  --accent-soft: #e4e8e8;
+  --accent: #325d86;
+  --accent-soft: #e1ebf5;
   --serif: "Noto Serif TC", serif;
   --sans: "Noto Sans TC", system-ui, -apple-system, "PingFang TC", sans-serif;
 }
@@ -18,8 +18,8 @@
     --text: #e9ecec;
     --muted: #b0b8bc;
     --line: #3b4144;
-    --accent: #c4cacf;
-    --accent-soft: #343a3e;
+    --accent: #a9c9e8;
+    --accent-soft: #283a4b;
   }
 }
 
@@ -43,26 +43,26 @@ nav a:hover { color: var(--accent); }
 /* 首頁主視覺 */
 .hero { padding: 96px 0 80px; border-bottom: 1px solid var(--line); }
 .eyebrow { color: var(--accent); font-weight: 500; letter-spacing: .05em; margin: 0; }
-.hero h1 { font-size: clamp(34px, 5.4vw, 58px); margin: 10px 0 0; letter-spacing: -.025em; }
-.hero .en { color: var(--muted); margin: 4px 0 25px; font-size: 16px; letter-spacing: .03em; }
-.tagline { font-family: var(--serif); font-size: 20px; margin: 0 0 14px; line-height: 1.65; }
-.intro { max-width: 700px; color: var(--muted); font-size: 15px; line-height: 1.95; }
+.hero h1 { font-size: clamp(32px, 5vw, 52px); margin: 8px 0 0; }
+.hero .en { color: var(--muted); margin: 4px 0 24px; font-size: 18px; }
+.tagline { font-family: var(--serif); font-size: 22px; margin: 0 0 12px; }
+.intro { max-width: 680px; color: var(--muted); }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
-.btn { display: inline-block; padding: 10px 22px; border: 1px solid var(--accent); border-radius: 10px; text-decoration: none; font-weight: 500; }
+.btn { display: inline-block; padding: 10px 22px; border: 1px solid var(--accent); border-radius: 999px; text-decoration: none; font-weight: 500; }
 .btn.primary { background: var(--accent); color: var(--bg); }
 
 /* 區塊 */
 .section { padding: 72px 0; }
 .section.alt { background: var(--bg-alt); }
-.section h2 { font-size: 29px; margin: 0 0 30px; padding-bottom: 17px; border-bottom: 1px solid var(--line); }
-.section h2::after { content: none; }
+.section h2 { font-size: 30px; margin: 0 0 32px; }
+.section h2::after { content: ""; display: block; width: 40px; height: 3px; background: var(--accent); margin-top: 10px; }
 
 .grid { display: grid; gap: 20px; }
-.cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px; }
-.card .icon { display: inline-block; color: var(--accent); font-size: 22px; line-height: 1; }
-.card h3 { margin: 15px 0 10px; font-size: 19px; line-height: 1.5; }
-.card p { margin: 0; color: var(--muted); line-height: 1.85; }
+.cards { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+.card .icon { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); font-size: 18px; }
+.card h3 { margin: 14px 0 6px; font-size: 19px; }
+.card p { margin: 0; color: var(--muted); }
 
 /* 研究圖像 */
 .research-visual { margin: 40px 0 0; }
@@ -117,7 +117,7 @@ nav a:hover { color: var(--accent); }
 
 /* 消息 */
 .news { list-style: none; margin: 0; padding: 0; }
-.news li { display: grid; grid-template-columns: 118px minmax(0, 1fr); gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.news li { display: flex; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .news time { flex: none; color: var(--accent); font-variant-numeric: tabular-nums; }
 
 /* 聯絡 */
@@ -140,8 +140,7 @@ nav a:hover { color: var(--accent); }
   .hero { padding: 64px 0 56px; }
   .pub-year { grid-template-columns: 1fr; }
   .pub-pending { padding-left: 0; }
-  .news li { grid-template-columns: 1fr; gap: 3px; }
-  .cards { grid-template-columns: 1fr; }
+  .news li { flex-direction: column; gap: 2px; }
 }
 
 /* 學習資源 */
