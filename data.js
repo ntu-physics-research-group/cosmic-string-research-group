@@ -54,7 +54,7 @@ const SITE = {
     {
       group: "指導教授",
       people: [
-        { name: "林奕安", role: "", topic: "Lensing of Gravitational Waves by Cosmic Strings from Scattering Amplitudes", topicLabel: "近期研究課題", office: "天文數學館 820 室", email: "" },
+        { name: "林奕安", role: "", topic: "", office: "天文數學館 820 室", email: "" },
         { name: "晏千博", role: "", topic: "", office: "天文數學館 819 室", email: "justin910912@gmail.com" },
         { name: "劉雨恩", role: "", topic: "", email: "" },
         { name: "張凱甯", role: "合聘研究員", topic: "電波天文學", office: "天文數學館 827 室", email: "" },
@@ -74,17 +74,28 @@ const SITE = {
   ],
 
   // ---- 論文發表（依年份自動分組）----
-  // 範例：{ year: 2026, authors: "作者", title: "論文標題", venue: "期刊或會議", link: "https://..." }
-  publications: [],
+  // 已發表論文填入年份；尚在準備中的研究標為 status: "in preparation"，year 留空。
+  publications: [
+    {
+      year: null,
+      authors: "",
+      title: "Lensing of Gravitational Waves by Cosmic Strings from Scattering Amplitudes",
+      venue: "",
+      link: "",
+      status: "in preparation",
+    },
+  ],
 
   // ---- 最新消息 ----
   // 範例：{ date: "2026-09-24", text: "消息內容" }
   news: [
-    { date: "2026.10.08", text: "因應雙十連假，原訂 10/9 的研究小組 Meeting 改於 10/8（四）跨研究小組 Meeting 結束後舉行。" },
+    { date: "2026.10.26", text: "10 月 29 日（四）的跨研究小組 Meeting 因期中考週暫停一次。原訂 10 月 30 日（五）的研究小組 Meeting 改於 10 月 29 日（四）17:00 舉行。" },
+    { date: "2026.10.26", text: "受薔琵颱風影響，原訂 10 月 23 日（五）的研究小組 Meeting 已提前至 10 月 22 日（四）跨研究小組 Meeting 結束後舉行。" },
+    { date: "2026.10.08", text: "配合國慶連假，原訂 10 月 9 日（五）的研究小組 Meeting 已提前至 10 月 8 日（四）跨研究小組 Meeting 結束後舉行。" },
     { date: "2026.10.04", text: "歡迎博士生林宥崴加入研究小組。" },
-    { date: "2026.09.24", text: "歡迎新成員張凱甯加入研究小組" },
-    { date: "2026.09.23", text: "因應中秋連假，原訂 9/25 的研究小組 Meeting 改於 9/24（四）上午 10:30 舉行。" },
-    { date: "2026.09.17", text: "研究小組成立" },
+    { date: "2026.09.24", text: "歡迎合聘研究員張凱甯加入研究小組。" },
+    { date: "2026.09.23", text: "配合中秋節連假，原訂 9 月 25 日（五）的研究小組 Meeting 已提前至 9 月 24 日（四）10:30 舉行。" },
+    { date: "2026.09.17", text: "研究小組成立。" },
   ],
 
   // ---- 學習資源：PDF 存在時才會顯示在網站上 ----
