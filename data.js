@@ -78,7 +78,7 @@ const SITE = {
   publications: [
     {
       year: null,
-      authors: "",
+      authors: "林奕安",
       title: "Lensing of Gravitational Waves by Cosmic Strings from Scattering Amplitudes",
       venue: "",
       link: "",
