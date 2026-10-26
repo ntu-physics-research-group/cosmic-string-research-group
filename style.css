@@ -1,25 +1,25 @@
 :root {
-  --bg: #fbfaf7;
-  --bg-alt: #f2efe8;
+  --bg: #fafaf8;
+  --bg-alt: #eff0ee;
   --surface: #ffffff;
-  --text: #1f2328;
-  --muted: #5b6168;
-  --line: #e2ddd2;
-  --accent: #1d5c63;
-  --accent-soft: #e3efef;
+  --text: #24282b;
+  --muted: #62696c;
+  --line: #d6dad9;
+  --accent: #444b50;
+  --accent-soft: #e4e8e8;
   --serif: "Noto Serif TC", serif;
   --sans: "Noto Sans TC", system-ui, -apple-system, "PingFang TC", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14171a;
-    --bg-alt: #1b1f23;
-    --surface: #20252a;
-    --text: #e8e6e1;
-    --muted: #a3a8ad;
-    --line: #2f353b;
-    --accent: #7cc4c4;
-    --accent-soft: #23373a;
+    --bg: #17191b;
+    --bg-alt: #202326;
+    --surface: #262a2d;
+    --text: #e9ecec;
+    --muted: #b0b8bc;
+    --line: #3b4144;
+    --accent: #c4cacf;
+    --accent-soft: #343a3e;
   }
 }
 
