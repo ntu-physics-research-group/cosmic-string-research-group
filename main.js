@@ -77,7 +77,7 @@
     const title = p.link
       ? `<a href="${esc(p.link)}" target="_blank" rel="noopener noreferrer">${esc(p.title)}</a>`
       : esc(p.title);
-    const status = p.status === "in preparation" ? ' <em>(in preparation)</em>' : "";
+    const status = p.status === "in preparation" ? ' <span class="pub-status">(in preparation)</span>' : "";
     const meta = [
       p.authors ? esc(p.authors) : "",
       p.venue ? `<em>${esc(p.venue)}</em>` : "",
