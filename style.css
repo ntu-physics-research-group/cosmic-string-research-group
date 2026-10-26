@@ -112,6 +112,7 @@ nav a:hover { color: var(--accent); }
 .pub-title { display: block; font-weight: 500; }
 .pub-title a { color: var(--text); }
 .pub-meta { color: var(--muted); font-size: 14px; }
+.pub-status { color: var(--muted); font-style: normal; font-weight: 400; }
 .pub-pending { display: block; padding-left: 92px; }
 
 /* 消息 */
