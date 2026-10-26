@@ -112,6 +112,7 @@ nav a:hover { color: var(--accent); }
 .pub-title { display: block; font-weight: 500; }
 .pub-title a { color: var(--text); }
 .pub-meta { color: var(--muted); font-size: 14px; }
+.pub-pending { display: block; padding-left: 92px; }
 
 /* 消息 */
 .news { list-style: none; margin: 0; padding: 0; }
@@ -137,6 +138,7 @@ nav a:hover { color: var(--accent); }
   nav a { padding: 14px 20px; border-top: 1px solid var(--line); }
   .hero { padding: 64px 0 56px; }
   .pub-year { grid-template-columns: 1fr; }
+  .pub-pending { padding-left: 0; }
   .news li { flex-direction: column; gap: 2px; }
 }
 
@@ -145,6 +147,6 @@ nav a:hover { color: var(--accent); }
 .note-card h3 { margin: 6px 0 12px; font-size: 18px; overflow-wrap: anywhere; }
 .note-card h3 a { color: var(--text); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .note-card .note-category { color: var(--accent); font-size: 13px; font-weight: 700; }
-.note-card .note-meta { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
+.note-card .note-meta { color: var(--muted); font-size: 13px; margin-bottom: 0; }
 .member .advisor { color: var(--muted); }
 .member .research-topic-title { font-style: italic; }
