@@ -92,7 +92,7 @@
       .join("")}</ol></div>`
   );
   if (preparing.length) {
-    pubGroups.push(`<div class="pub-year"><h3>準備中</h3><ol>${preparing.map(renderPublication).join("")}</ol></div>`);
+    pubGroups.push(`<div class="pub-year pub-pending"><ol>${preparing.map(renderPublication).join("")}</ol></div>`);
   }
   $("pubList").innerHTML = pubGroups.length ? pubGroups.join("") : empty;
 
@@ -110,9 +110,8 @@
     $("notesNav").hidden = false;
     $("noteList").innerHTML = published.map(n => `<article class="card note-card">
       <p class="note-category">${esc(n.category)}</p>
-      <h3><a href="${esc(n.file)}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a></h3>
+      <h3><a href="${esc(n.file)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(n.title)}（開啟 PDF）">${esc(n.title)}</a></h3>
       <p class="note-meta">${esc(n.credit)}・${esc(n.date)}・${esc(n.pages)} 頁</p>
-      <p><a href="${esc(n.file)}" target="_blank" rel="noopener noreferrer">閱讀 PDF ↗</a></p>
     </article>`).join("");
   });
 
