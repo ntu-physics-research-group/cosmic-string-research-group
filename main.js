@@ -69,21 +69,32 @@
         .join("")
     : empty;
 
-  // 論文（依年份新到舊）
-  const years = [...new Set(SITE.publications.map((p) => p.year))].sort((a, b) => b - a);
-  $("pubList").innerHTML = years.length ? "" : empty;
-  if (years.length) $("pubList").innerHTML = years
-    .map(
-      (y) => `<div class="pub-year"><h3>${y}</h3><ol>${SITE.publications
-        .filter((p) => p.year === y)
-        .map(
-          (p) => `<li><span class="pub-title">${
-            p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title)
-          }</span><span class="pub-meta">${esc(p.authors)}．<em>${esc(p.venue)}</em></span></li>`
-        )
-        .join("")}</ol></div>`
-    )
-    .join("");
+  // 論文：已發表按年份排列，準備中的研究獨立列出。
+  const publications = SITE.publications || [];
+  const published = publications.filter((p) => p.status !== "in preparation" && Number.isInteger(p.year));
+  const preparing = publications.filter((p) => p.status === "in preparation" || !Number.isInteger(p.year));
+  const renderPublication = (p) => {
+    const title = p.link
+      ? `<a href="${esc(p.link)}" target="_blank" rel="noopener noreferrer">${esc(p.title)}</a>`
+      : esc(p.title);
+    const status = p.status === "in preparation" ? ' <em>(in preparation)</em>' : "";
+    const meta = [
+      p.authors ? esc(p.authors) : "",
+      p.venue ? `<em>${esc(p.venue)}</em>` : "",
+    ].filter(Boolean).join("．");
+    return `<li><span class="pub-title">${title}${status}</span>${meta ? `<span class="pub-meta">${meta}</span>` : ""}</li>`;
+  };
+  const years = [...new Set(published.map((p) => p.year))].sort((a, b) => b - a);
+  const pubGroups = years.map(
+    (y) => `<div class="pub-year"><h3>${y}</h3><ol>${published
+      .filter((p) => p.year === y)
+      .map(renderPublication)
+      .join("")}</ol></div>`
+  );
+  if (preparing.length) {
+    pubGroups.push(`<div class="pub-year"><h3>準備中</h3><ol>${preparing.map(renderPublication).join("")}</ol></div>`);
+  }
+  $("pubList").innerHTML = pubGroups.length ? pubGroups.join("") : empty;
 
   // 學習資源：檔案確實部署成功才公開連結；避免 404
   const notes = SITE.notes || [];
