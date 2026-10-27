@@ -106,6 +106,7 @@
     } catch (_) { return null; }
   })).then((available) => {
     const published = available.filter(Boolean);
+    published.sort((a, b) => a.title.localeCompare(b.title, "en", { sensitivity: "base" }));
     $("noteList").innerHTML = published.length ? published.map(n => `<article class="card note-card">
       <p class="note-category">${esc(n.category)}</p>
       <h3><a href="${esc(n.file)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(n.title)}（開啟 PDF）">${esc(n.title)}</a></h3>
@@ -132,6 +133,7 @@
   };
   const resourceLimit = 6;
   Object.entries(resourceGroups).forEach(([group, items]) => {
+    items.sort((a, b) => a.title.localeCompare(b.title, "en", { sensitivity: "base" }));
     const list = $("resourceList-" + group);
     const more = $("resourceMore-" + group);
     let expanded = false;
