@@ -96,6 +96,7 @@
           <button type="button" class="resource-tab" role="tab" id="resource-tab-notes" aria-selected="true" aria-controls="resource-panel-notes" tabindex="0">學習筆記</button>
           <button type="button" class="resource-tab" role="tab" id="resource-tab-tools" aria-selected="false" aria-controls="resource-panel-tools" tabindex="-1">線上工具</button>
           <button type="button" class="resource-tab" role="tab" id="resource-tab-software" aria-selected="false" aria-controls="resource-panel-software" tabindex="-1">分析軟體</button>
+          <button type="button" class="resource-tab" role="tab" id="resource-tab-programs" aria-selected="false" aria-controls="resource-panel-programs" tabindex="-1">觀測計畫</button>
           <button type="button" class="resource-tab" role="tab" id="resource-tab-observations" aria-selected="false" aria-controls="resource-panel-observations" tabindex="-1">觀測資料</button>
           <button type="button" class="resource-tab" role="tab" id="resource-tab-sky" aria-selected="false" aria-controls="resource-panel-sky" tabindex="-1">天文視覺化</button>
           <button type="button" class="resource-tab" role="tab" id="resource-tab-literature" aria-selected="false" aria-controls="resource-panel-literature" tabindex="-1">文獻檢索</button>
@@ -110,6 +111,10 @@
         <div class="resource-panel" role="tabpanel" id="resource-panel-software" aria-labelledby="resource-tab-software" hidden>
           <div class="resource-list" id="resourceList-software"></div>
           <button class="resource-more" type="button" id="resourceMore-software" hidden></button>
+        </div>
+        <div class="resource-panel" role="tabpanel" id="resource-panel-programs" aria-labelledby="resource-tab-programs" hidden>
+          <div class="resource-list" id="resourceList-programs"></div>
+          <button class="resource-more" type="button" id="resourceMore-programs" hidden></button>
         </div>
         <div class="resource-panel" role="tabpanel" id="resource-panel-observations" aria-labelledby="resource-tab-observations" hidden>
           <div class="resource-list" id="resourceList-observations"></div>
@@ -154,6 +159,6 @@
   </footer>
 
   <script src="data.js?v=20261027-research-numbers"></script>
-  <script src="main.js?v=20261027-resource-categories"></script>
+  <script src="main.js?v=20261027-observation-programs"></script>
 </body>
 </html>

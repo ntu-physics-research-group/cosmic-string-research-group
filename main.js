@@ -181,6 +181,103 @@
               "url": "https://namaster.readthedocs.io/en/latest/"
           }
       ],
+      "programs": [
+          {
+              "title": "ACT (Atacama Cosmology Telescope)",
+              "description": "CMB 溫度與偏振觀測；已結束觀測",
+              "url": "https://act.princeton.edu/"
+          },
+          {
+              "title": "BICEP Array",
+              "description": "南極 CMB 偏振與原初 B-mode 搜尋",
+              "url": "https://cosmology.caltech.edu/projects/BICEP_Array"
+          },
+          {
+              "title": "CHIME",
+              "description": "中性氫強度測繪、快速電波爆發與脈衝星觀測",
+              "url": "https://chime-experiment.ca/"
+          },
+          {
+              "title": "Cosmic Explorer",
+              "description": "規劃中的新一代地面重力波觀測站",
+              "url": "https://cosmicexplorer.org/"
+          },
+          {
+              "title": "DESI",
+              "description": "星系與類星體光譜巡天；研究宇宙膨脹與 BAO",
+              "url": "https://www.desi.lbl.gov/"
+          },
+          {
+              "title": "Einstein Telescope",
+              "description": "規劃中的第三代地下重力波干涉儀",
+              "url": "https://einsteintelescope.eu/"
+          },
+          {
+              "title": "Euclid",
+              "description": "ESA 太空巡天；宇宙大尺度結構、暗物質與暗能量",
+              "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid"
+          },
+          {
+              "title": "HERA",
+              "description": "以 21 cm 訊號探測宇宙再電離時期的中性氫",
+              "url": "https://reionization.org/"
+          },
+          {
+              "title": "IPTA",
+              "description": "國際脈衝星計時陣列；奈赫茲重力波搜尋",
+              "url": "https://www.ipta4gw.org/"
+          },
+          {
+              "title": "LIGO–Virgo–KAGRA (LVK)",
+              "description": "地面干涉儀網路；重力波事件偵測與分析",
+              "url": "https://www.ligo.caltech.edu/page/ligo-scientific-collaboration.html"
+          },
+          {
+              "title": "LISA",
+              "description": "ESA 規劃中的太空重力波觀測任務",
+              "url": "https://www.esa.int/Science_Exploration/Space_Science/LISA"
+          },
+          {
+              "title": "LiteBIRD",
+              "description": "JAXA 籌備中的太空 CMB 偏振觀測任務",
+              "url": "https://www.isas.jaxa.jp/en/missions/spacecraft/future/litebird.html"
+          },
+          {
+              "title": "NANOGrav",
+              "description": "北美脈衝星計時陣列；奈赫茲重力波背景研究",
+              "url": "https://nanograv.org/"
+          },
+          {
+              "title": "Planck",
+              "description": "ESA 已完成的全天 CMB 溫度與偏振觀測任務",
+              "url": "https://www.esa.int/Science_Exploration/Space_Science/Planck_overview"
+          },
+          {
+              "title": "Roman Space Telescope",
+              "description": "NASA 已發射的近紅外太空望遠鏡；預定進行暗能量巡天",
+              "url": "https://science.nasa.gov/mission/roman-space-telescope/"
+          },
+          {
+              "title": "Rubin Observatory (LSST)",
+              "description": "大視野光學巡天；暗能量、暗物質與時域天文",
+              "url": "https://rubinobservatory.org/explore/how-rubin-works/lsst"
+          },
+          {
+              "title": "Simons Observatory",
+              "description": "智利高精度 CMB 溫度、偏振及大尺度結構觀測",
+              "url": "https://simonsobservatory.org/"
+          },
+          {
+              "title": "SKA Observatory",
+              "description": "澳洲與南非的大型電波望遠鏡陣列建設計畫",
+              "url": "https://www.skao.int/"
+          },
+          {
+              "title": "South Pole Telescope",
+              "description": "南極毫米波巡天；CMB、重力透鏡與星系團",
+              "url": "https://pole.uchicago.edu/"
+          }
+      ],
       "observations": [
           {
               "title": "ACT DR6",
