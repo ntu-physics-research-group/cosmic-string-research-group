@@ -185,97 +185,116 @@
           {
               "title": "ACT (Atacama Cosmology Telescope)",
               "description": "CMB 溫度與偏振觀測；已結束觀測",
-              "url": "https://act.princeton.edu/"
+              "url": "https://act.princeton.edu/",
+              "period": "2007–2022（已結束觀測）"
           },
           {
               "title": "BICEP Array",
               "description": "南極 CMB 偏振與原初 B-mode 搜尋",
-              "url": "https://cosmology.caltech.edu/projects/BICEP_Array"
+              "url": "https://cosmology.caltech.edu/projects/BICEP_Array",
+              "period": "2020–至今（持續觀測）"
           },
           {
               "title": "CHIME",
               "description": "中性氫強度測繪、快速電波爆發與脈衝星觀測",
-              "url": "https://chime-experiment.ca/"
+              "url": "https://chime-experiment.ca/",
+              "period": "2018–至今（科學觀測）"
           },
           {
               "title": "Cosmic Explorer",
               "description": "規劃中的新一代地面重力波觀測站",
-              "url": "https://cosmicexplorer.org/"
+              "url": "https://cosmicexplorer.org/",
+              "period": "預估 2030 年代中期開始運作（規劃中）"
           },
           {
               "title": "DESI",
               "description": "星系與類星體光譜巡天；研究宇宙膨脹與 BAO",
-              "url": "https://www.desi.lbl.gov/"
+              "url": "https://www.desi.lbl.gov/",
+              "period": "2021–至今（原定五年巡天已完成，持續觀測）"
           },
           {
               "title": "Einstein Telescope",
               "description": "規劃中的第三代地下重力波干涉儀",
-              "url": "https://einsteintelescope.eu/"
+              "url": "https://einsteintelescope.eu/",
+              "period": "目標約 2035 年開始運作（規劃中）"
           },
           {
               "title": "Euclid",
               "description": "ESA 太空巡天；宇宙大尺度結構、暗物質與暗能量",
-              "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid"
+              "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+              "period": "2024–約 2030（預定六年科學巡天）"
           },
           {
               "title": "HERA",
               "description": "以 21 cm 訊號探測宇宙再電離時期的中性氫",
-              "url": "https://reionization.org/"
+              "url": "https://reionization.org/",
+              "period": "2017 年起（多個觀測季，結束年份未確認）"
           },
           {
               "title": "IPTA",
               "description": "國際脈衝星計時陣列；奈赫茲重力波搜尋",
-              "url": "https://www.ipta4gw.org/"
+              "url": "https://www.ipta4gw.org/",
+              "period": "2009–至今（國際合作計畫）"
           },
           {
               "title": "LIGO–Virgo–KAGRA (LVK)",
               "description": "地面干涉儀網路；重力波事件偵測與分析",
-              "url": "https://www.ligo.caltech.edu/page/ligo-scientific-collaboration.html"
+              "url": "https://www.ligo.caltech.edu/page/ligo-scientific-collaboration.html",
+              "period": "2015–至今（分階段觀測，非連續）"
           },
           {
               "title": "LISA",
               "description": "ESA 規劃中的太空重力波觀測任務",
-              "url": "https://www.esa.int/Science_Exploration/Space_Science/LISA"
+              "url": "https://www.esa.int/Science_Exploration/Space_Science/LISA",
+              "period": "預定 2035 年發射；標準任務 4 年"
           },
           {
               "title": "LiteBIRD",
               "description": "JAXA 籌備中的太空 CMB 偏振觀測任務",
-              "url": "https://www.isas.jaxa.jp/en/missions/spacecraft/future/litebird.html"
+              "url": "https://www.isas.jaxa.jp/en/missions/spacecraft/future/litebird.html",
+              "period": "目標日本 2036 財政年度發射（規劃中）"
           },
           {
               "title": "NANOGrav",
               "description": "北美脈衝星計時陣列；奈赫茲重力波背景研究",
-              "url": "https://nanograv.org/"
+              "url": "https://nanograv.org/",
+              "period": "2007–至今（合作計畫，持續計時觀測）"
           },
           {
               "title": "Planck",
               "description": "ESA 已完成的全天 CMB 溫度與偏振觀測任務",
-              "url": "https://www.esa.int/Science_Exploration/Space_Science/Planck_overview"
+              "url": "https://www.esa.int/Science_Exploration/Space_Science/Planck_overview",
+              "period": "2009–2013（已結束）"
           },
           {
               "title": "Roman Space Telescope",
               "description": "NASA 已發射的近紅外太空望遠鏡；預定進行暗能量巡天",
-              "url": "https://science.nasa.gov/mission/roman-space-telescope/"
+              "url": "https://science.nasa.gov/mission/roman-space-telescope/",
+              "period": "2026 年發射；預定 5 年科學任務"
           },
           {
               "title": "Rubin Observatory (LSST)",
               "description": "大視野光學巡天；暗能量、暗物質與時域天文",
-              "url": "https://rubinobservatory.org/explore/how-rubin-works/lsst"
+              "url": "https://rubinobservatory.org/explore/how-rubin-works/lsst",
+              "period": "2026–2036（預定十年巡天）"
           },
           {
               "title": "Simons Observatory",
               "description": "智利高精度 CMB 溫度、偏振及大尺度結構觀測",
-              "url": "https://simonsobservatory.org/"
+              "url": "https://simonsobservatory.org/",
+              "period": "2023 年底起調校觀測（科學巡天時程未定）"
           },
           {
               "title": "SKA Observatory",
               "description": "澳洲與南非的大型電波望遠鏡陣列建設計畫",
-              "url": "https://www.skao.int/"
+              "url": "https://www.skao.int/",
+              "period": "建設中；預計 2027 年起科學驗證"
           },
           {
               "title": "South Pole Telescope",
               "description": "南極毫米波巡天；CMB、重力透鏡與星系團",
-              "url": "https://pole.uchicago.edu/"
+              "url": "https://pole.uchicago.edu/",
+              "period": "2007–至今（持續觀測）"
           }
       ],
       "observations": [
@@ -370,7 +389,8 @@
       list.innerHTML = items.slice(0, expanded ? items.length : resourceLimit)
         .map((item) => '<a class="resource-item" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">' +
           '<span class="resource-title">' + esc(item.title) + '</span>' +
-          '<span class="resource-description">' + esc(item.description) + '</span></a>')
+          '<span class="resource-description">' + esc(item.description) + '</span>' +
+          (item.period ? '<span class="resource-period">期間：' + esc(item.period) + '</span>' : '') + '</a>')
         .join("");
       more.hidden = items.length <= resourceLimit;
       if (!more.hidden) {
