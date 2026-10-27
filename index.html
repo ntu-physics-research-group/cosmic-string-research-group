@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20261027-resource-tabs" />
+  <link rel="stylesheet" href="style.css?v=20261027-resource-categories" />
 </head>
 <body>
   <header class="topbar">
@@ -94,8 +94,11 @@
         <h2>學習資源</h2>
         <div class="resource-tabs" role="tablist" aria-label="學習資源分類">
           <button type="button" class="resource-tab" role="tab" id="resource-tab-notes" aria-selected="true" aria-controls="resource-panel-notes" tabindex="0">學習筆記</button>
-          <button type="button" class="resource-tab" role="tab" id="resource-tab-tools" aria-selected="false" aria-controls="resource-panel-tools" tabindex="-1">研究工具</button>
+          <button type="button" class="resource-tab" role="tab" id="resource-tab-tools" aria-selected="false" aria-controls="resource-panel-tools" tabindex="-1">線上工具</button>
+          <button type="button" class="resource-tab" role="tab" id="resource-tab-software" aria-selected="false" aria-controls="resource-panel-software" tabindex="-1">分析軟體</button>
           <button type="button" class="resource-tab" role="tab" id="resource-tab-observations" aria-selected="false" aria-controls="resource-panel-observations" tabindex="-1">觀測資料</button>
+          <button type="button" class="resource-tab" role="tab" id="resource-tab-sky" aria-selected="false" aria-controls="resource-panel-sky" tabindex="-1">天空瀏覽</button>
+          <button type="button" class="resource-tab" role="tab" id="resource-tab-literature" aria-selected="false" aria-controls="resource-panel-literature" tabindex="-1">文獻檢索</button>
         </div>
         <div class="resource-panel" role="tabpanel" id="resource-panel-notes" aria-labelledby="resource-tab-notes">
           <div class="grid notes" id="noteList"></div>
@@ -104,9 +107,21 @@
           <div class="resource-list" id="resourceList-tools"></div>
           <button class="resource-more" type="button" id="resourceMore-tools" hidden></button>
         </div>
+        <div class="resource-panel" role="tabpanel" id="resource-panel-software" aria-labelledby="resource-tab-software" hidden>
+          <div class="resource-list" id="resourceList-software"></div>
+          <button class="resource-more" type="button" id="resourceMore-software" hidden></button>
+        </div>
         <div class="resource-panel" role="tabpanel" id="resource-panel-observations" aria-labelledby="resource-tab-observations" hidden>
           <div class="resource-list" id="resourceList-observations"></div>
           <button class="resource-more" type="button" id="resourceMore-observations" hidden></button>
+        </div>
+        <div class="resource-panel" role="tabpanel" id="resource-panel-sky" aria-labelledby="resource-tab-sky" hidden>
+          <div class="resource-list" id="resourceList-sky"></div>
+          <button class="resource-more" type="button" id="resourceMore-sky" hidden></button>
+        </div>
+        <div class="resource-panel" role="tabpanel" id="resource-panel-literature" aria-labelledby="resource-tab-literature" hidden>
+          <div class="resource-list" id="resourceList-literature"></div>
+          <button class="resource-more" type="button" id="resourceMore-literature" hidden></button>
         </div>
       </div>
     </section>
@@ -139,6 +154,6 @@
   </footer>
 
   <script src="data.js?v=20261027-research-numbers"></script>
-  <script src="main.js?v=20261027-resource-alphabetical"></script>
+  <script src="main.js?v=20261027-resource-categories"></script>
 </body>
 </html>

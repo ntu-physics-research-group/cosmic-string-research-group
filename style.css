@@ -167,6 +167,7 @@ nav a:hover { color: var(--accent); }
 .resource-more { margin-top: 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--accent); padding: 8px 16px; font: inherit; font-size: 14px; cursor: pointer; }
 .resource-tab:focus-visible, .resource-item:focus-visible, .resource-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 @media (max-width: 760px) {
-  .resource-tabs { gap: 22px; }
+  .resource-tabs { flex-wrap: wrap; overflow-x: visible; column-gap: 20px; row-gap: 0; }
+  .resource-tab { padding: 9px 2px; }
   .resource-list { grid-template-columns: 1fr; }
 }
