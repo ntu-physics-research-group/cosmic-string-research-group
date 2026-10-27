@@ -184,7 +184,7 @@
       "programs": [
           {
               "title": "ACT (Atacama Cosmology Telescope)",
-              "description": "CMB 溫度與偏振觀測；已結束觀測",
+              "description": "CMB 溫度與偏振觀測",
               "url": "https://act.princeton.edu/",
               "period": "2007–2022（已結束觀測）"
           },
@@ -202,7 +202,7 @@
           },
           {
               "title": "Cosmic Explorer",
-              "description": "規劃中的新一代地面重力波觀測站",
+              "description": "新一代地面重力波觀測站",
               "url": "https://cosmicexplorer.org/",
               "period": "預估 2030 年代中期開始運作（規劃中）"
           },
@@ -214,7 +214,7 @@
           },
           {
               "title": "Einstein Telescope",
-              "description": "規劃中的第三代地下重力波干涉儀",
+              "description": "第三代地下重力波干涉儀",
               "url": "https://einsteintelescope.eu/",
               "period": "目標約 2035 年開始運作（規劃中）"
           },
@@ -244,13 +244,13 @@
           },
           {
               "title": "LISA",
-              "description": "ESA 規劃中的太空重力波觀測任務",
+              "description": "ESA 太空重力波觀測任務",
               "url": "https://www.esa.int/Science_Exploration/Space_Science/LISA",
               "period": "預定 2035 年發射；標準任務 4 年"
           },
           {
               "title": "LiteBIRD",
-              "description": "JAXA 籌備中的太空 CMB 偏振觀測任務",
+              "description": "JAXA 太空 CMB 偏振觀測任務",
               "url": "https://www.isas.jaxa.jp/en/missions/spacecraft/future/litebird.html",
               "period": "目標日本 2036 財政年度發射（規劃中）"
           },
@@ -262,13 +262,13 @@
           },
           {
               "title": "Planck",
-              "description": "ESA 已完成的全天 CMB 溫度與偏振觀測任務",
+              "description": "ESA 全天 CMB 溫度與偏振觀測任務",
               "url": "https://www.esa.int/Science_Exploration/Space_Science/Planck_overview",
               "period": "2009–2013（已結束）"
           },
           {
               "title": "Roman Space Telescope",
-              "description": "NASA 已發射的近紅外太空望遠鏡；預定進行暗能量巡天",
+              "description": "NASA 近紅外太空望遠鏡；暗能量巡天",
               "url": "https://science.nasa.gov/mission/roman-space-telescope/",
               "period": "2026 年發射；預定 5 年科學任務"
           },
@@ -286,7 +286,7 @@
           },
           {
               "title": "SKA Observatory",
-              "description": "澳洲與南非的大型電波望遠鏡陣列建設計畫",
+              "description": "澳洲與南非的大型電波望遠鏡陣列",
               "url": "https://www.skao.int/",
               "period": "建設中；預計 2027 年起科學驗證"
           },
@@ -389,8 +389,8 @@
       list.innerHTML = items.slice(0, expanded ? items.length : resourceLimit)
         .map((item) => '<a class="resource-item" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">' +
           '<span class="resource-title">' + esc(item.title) + '</span>' +
-          '<span class="resource-description">' + esc(item.description) + '</span>' +
-          (item.period ? '<span class="resource-period">期間：' + esc(item.period) + '</span>' : '') + '</a>')
+          (item.period ? '<span class="resource-period">期間：' + esc(item.period) + '</span>' : '') +
+          '<span class="resource-description">' + esc(item.description) + '</span></a>')
         .join("");
       more.hidden = items.length <= resourceLimit;
       if (!more.hidden) {
