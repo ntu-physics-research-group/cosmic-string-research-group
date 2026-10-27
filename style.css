@@ -151,3 +151,22 @@ nav a:hover { color: var(--accent); }
 .note-card .note-meta { color: var(--muted); font-size: 13px; margin-bottom: 0; }
 .member .advisor { color: var(--muted); }
 .member .research-topic-title { font-style: italic; }
+
+
+/* 學習資源分類 */
+.resource-tabs { display: flex; gap: 28px; margin-bottom: 24px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.resource-tab { flex: none; appearance: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; padding: 12px 2px; background: transparent; color: var(--muted); font: inherit; font-size: 15px; cursor: pointer; white-space: nowrap; }
+.resource-tab:hover { color: var(--text); }
+.resource-tab[aria-selected="true"] { color: var(--accent); font-weight: 700; border-bottom-color: var(--accent); }
+.resource-panel[hidden], .resource-more[hidden] { display: none; }
+.resource-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+.resource-item { display: block; padding: 16px 0; border-bottom: 1px solid var(--line); text-decoration: none; min-width: 0; }
+.resource-title { display: block; color: var(--text); font-size: 16px; font-weight: 600; overflow-wrap: anywhere; }
+.resource-description { display: block; margin-top: 3px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.resource-item:hover .resource-title { color: var(--accent); }
+.resource-more { margin-top: 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--accent); padding: 8px 16px; font: inherit; font-size: 14px; cursor: pointer; }
+.resource-tab:focus-visible, .resource-item:focus-visible, .resource-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 760px) {
+  .resource-tabs { gap: 22px; }
+  .resource-list { grid-template-columns: 1fr; }
+}

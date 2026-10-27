@@ -98,6 +98,7 @@
 
   // 學習資源：檔案確實部署成功才公開連結；避免 404
   const notes = SITE.notes || [];
+  $("noteList").innerHTML = empty;
   Promise.all(notes.map(async (note) => {
     try {
       const response = await fetch(note.file, { method: "HEAD" });
@@ -105,14 +106,74 @@
     } catch (_) { return null; }
   })).then((available) => {
     const published = available.filter(Boolean);
-    if (!published.length) return;
-    $("notes").hidden = false;
-    $("notesNav").hidden = false;
-    $("noteList").innerHTML = published.map(n => `<article class="card note-card">
+    $("noteList").innerHTML = published.length ? published.map(n => `<article class="card note-card">
       <p class="note-category">${esc(n.category)}</p>
       <h3><a href="${esc(n.file)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(n.title)}（開啟 PDF）">${esc(n.title)}</a></h3>
       <p class="note-meta">${esc(n.credit)}・${esc(n.date)}・${esc(n.pages)} 頁</p>
-    </article>`).join("");
+    </article>`).join("") : empty;
+  });
+
+  // 學習資源：首頁僅切換分類，不展開所有外部資源。
+  // 外部資源獨立於 data.js，避免 Notion 同步覆寫。
+  const resourceGroups = {
+    tools: [
+      { title: "Ned Wright's Cosmology Calculator", description: "紅移、宇宙學距離與時間計算", url: "https://www.astro.ucla.edu/~wright/CosmoCalc.html" },
+      { title: "CAMB Online", description: "線上計算 CMB 功率譜", url: "https://lambda.gsfc.nasa.gov/toolbox/camb_online.html" },
+      { title: "Colossus", description: "宇宙學及大尺度結構數值計算", url: "https://colossus.astro.umd.edu/" },
+      { title: "CosmoSlider", description: "互動比較宇宙學參數與 CMB 頻譜", url: "https://aarhuscosmology.github.io/CosmoSliderWeb/" }
+    ],
+    observations: [
+      { title: "NASA LAMBDA", description: "CMB 觀測資料與分析資源", url: "https://lambda.gsfc.nasa.gov/" },
+      { title: "Planck Legacy Archive", description: "Planck 任務公開資料產品", url: "https://pla.esac.esa.int/" },
+      { title: "GWOSC", description: "重力波事件及公開 strain data", url: "https://gwosc.org/" },
+      { title: "NANOGrav Data", description: "脈衝星計時陣列觀測與分析資料", url: "https://nanograv.org/science/data" },
+      { title: "ESASky", description: "多波段全天觀測資料瀏覽", url: "https://sky.esa.int/" }
+    ]
+  };
+  const resourceLimit = 6;
+  Object.entries(resourceGroups).forEach(([group, items]) => {
+    const list = $("resourceList-" + group);
+    const more = $("resourceMore-" + group);
+    let expanded = false;
+    const render = () => {
+      list.innerHTML = items.slice(0, expanded ? items.length : resourceLimit)
+        .map((item) => '<a class="resource-item" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">' +
+          '<span class="resource-title">' + esc(item.title) + '</span>' +
+          '<span class="resource-description">' + esc(item.description) + '</span></a>')
+        .join("");
+      more.hidden = items.length <= resourceLimit;
+      if (!more.hidden) {
+        more.textContent = expanded ? "收起" : "顯示更多（" + (items.length - resourceLimit) + "）";
+        more.setAttribute("aria-expanded", String(expanded));
+      }
+    };
+    more.addEventListener("click", () => { expanded = !expanded; render(); });
+    render();
+  });
+
+  const resourceTabs = Array.from(document.querySelectorAll("#notes .resource-tab"));
+  const activateResourceTab = (active, focus = false) => {
+    resourceTabs.forEach((tab) => {
+      const selected = tab === active;
+      tab.setAttribute("aria-selected", String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      $(tab.getAttribute("aria-controls")).hidden = !selected;
+    });
+    if (focus) active.focus();
+  };
+  resourceTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => activateResourceTab(tab));
+    tab.addEventListener("keydown", (event) => {
+      let next;
+      if (event.key === "ArrowRight") next = (index + 1) % resourceTabs.length;
+      else if (event.key === "ArrowLeft") next = (index + resourceTabs.length - 1) % resourceTabs.length;
+      else if (event.key === "Home") next = 0;
+      else if (event.key === "End") next = resourceTabs.length - 1;
+      if (next !== undefined) {
+        event.preventDefault();
+        activateResourceTab(resourceTabs[next], true);
+      }
+    });
   });
 
   // 最新消息
